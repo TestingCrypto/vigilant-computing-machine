@@ -1,0 +1,57 @@
+Preparing "Install Android SDK Platform-Tools (revision: 28.0.0)".
+Downloading https://dl.google.com/android/repository/platform-tools_r28.0.0-linux.zip
+"Install Android SDK Platform-Tools (revision: 28.0.0)" ready.
+Installing Android SDK Platform-Tools in /home/user/Android/Sdk/platform-tools
+"Install Android SDK Platform-Tools (revision: 28.0.0)" complete.
+"Install Android SDK Platform-Tools (revision: 28.0.0)" finished.
+Preparing "Install Android SDK Build-Tools 28 (revision: 28.0.0)".
+Downloading https://dl.google.com/android/repository/build-tools_r28-linux.zip
+"Install Android SDK Build-Tools 28 (revision: 28.0.0)" ready.
+Installing Android SDK Build-Tools 28 in /home/user/Android/Sdk/build-tools/28.0.0
+"Install Android SDK Build-Tools 28 (revision: 28.0.0)" complete.
+"Install Android SDK Build-Tools 28 (revision: 28.0.0)" finished.
+Preparing "Install Android Support Repository (revision: 47.0.0)".
+Downloading https://dl.google.com/android/repository/android_m2repository_r47.zip
+"Install Android Support Repository (revision: 47.0.0)" ready.
+Installing Android Support Repository in /home/user/Android/Sdk/extras/android/m2repository
+"Install Android Support Repository (revision: 47.0.0)" complete.
+"Install Android Support Repository (revision: 47.0.0)" finished.
+Preparing "Install Android SDK Tools (revision: 26.1.1)".
+Downloading https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+"Install Android SDK Tools (revision: 26.1.1)" ready.
+Installing Android SDK Tools in /home/user/Android/Sdk/tools
+"Install Android SDK Tools (revision: 26.1.1)" complete.
+"Install Android SDK Tools (revision: 26.1.1)" finished.
+Preparing "Install SDK Patch Applier v4 (revision: 1)".
+Downloading https://dl.google.com/android/repository/3534162-studio.sdk-patcher.zip.bak
+"Install SDK Patch Applier v4 (revision: 1)" ready.
+Installing SDK Patch Applier v4 in /home/user/Android/Sdk/patcher/v4
+"Install SDK Patch Applier v4 (revision: 1)" complete.
+"Install SDK Patch Applier v4 (revision: 1)" finished.
+Preparing "Install Android Emulator (revision: 27.2.9)".
+Downloading https://dl.google.com/android/repository/emulator-linux-4773671.zip
+"Install Android Emulator (revision: 27.2.9)" ready.
+Installing Android Emulator in /home/user/Android/Sdk/emulator
+"Install Android Emulator (revision: 27.2.9)" complete.
+"Install Android Emulator (revision: 27.2.9)" finished.
+Preparing "Install Google Repository (revision: 58)".
+Downloading https://dl.google.com/android/repository/google_m2repository_gms_v11_3_rc05_wear_2_0_5.zip
+"Install Google Repository (revision: 58)" ready.
+Installing Google Repository in /home/user/Android/Sdk/extras/google/m2repository
+"Install Google Repository (revision: 58)" complete.
+"Install Google Repository (revision: 58)" finished.
+Preparing "Install Android SDK Platform 28 (revision: 4)".
+Downloading https://dl.google.com/android/repository/platform-28_r04.zip
+"Install Android SDK Platform 28 (revision: 4)" ready.
+Installing Android SDK Platform 28 in /home/user/Android/Sdk/platforms/android-28
+"Install Android SDK Platform 28 (revision: 4)" complete.
+"Install Android SDK Platform 28 (revision: 4)" finished.
+Parsing /home/octacore/Android/Sdk/build-tools/28.0.0/package.xml
+Parsing /home/octacore/Android/Sdk/emulator/package.xml
+Parsing /home/octacore/Android/Sdk/extras/android/m2repository/package.xml
+Parsing /home/octacore/Android/Sdk/extras/google/m2repository/package.xml
+Parsing /home/octacore/Android/Sdk/patcher/v4/package.xml
+Parsing /home/octacore/Android/Sdk/platform-tools/package.xml
+Parsing /home/octacore/Android/Sdk/platforms/android-28/package.xml
+Parsing /home/octacore/Android/Sdk/tools/package.xml
+Android SDK is up to date.
