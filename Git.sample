@@ -1,0 +1,5 @@
+sudo apt-get install git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt install git
+//simple copy paste text, easier than copy/paste from git-scm && use of hot keys
