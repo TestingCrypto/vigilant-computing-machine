@@ -1,0 +1,61 @@
+sudo Techcoind -daemon -txindex
+sudo Firecoind -daemon -txindex
+sudo goldcoin-qt -daemon -txindex
+sudo dicestake-qt -daemon -txindex
+
+sudo mongo
+
+cd techcoin_explorer
+sudo npm start
+
+cd fire_explorer
+sudo npm start
+
+cd goldcoin_explorer
+sudo npm start
+
+cd dicestake_explorer
+sudo npm start
+
+sudo node scripts/sync.js index update
+sudo node scripts/sync.js index check
+sudo node scripts/sync.js index reindex
+
+sudo node scripts/peers.js index update
+sudo node scripts/peers.js index check
+sudo node scripts/peers.js index reindex
+
+sudo node scripts/sync.js market update
+sudo node scripts/sync.js market check
+sudo node scripts/sync.js market reindex
+
+crontab -e
+
+#################################################################################
+
+@reboot sleep 15; sudo Firecoind -daemon -txindex
+@reboot sleep 50; cd fire_explorer && npm start
+*/2 * * * * cd fire_explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+*/5 * * * * cd fire_explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+*/10 * * * * cd fire_explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+*/30 * * * * cd fire_explorer && /usr/bin/nodejs scripts/mapgetdata.js > /dev/null 2>&1
+@reboot sleep 17; sudo Techcoind -daemon -txindex
+@reboot sleep 53; cd tech_explorer && npm start
+*/2 * * * * cd techcoin_explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+*/5 * * * * cd techcoin_explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+*/10 * * * * cd techcoin_explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+*/30 * * * * cd techcoin_explorer && /usr/bin/nodejs scripts/mapgetdata.js > /dev/null 2>&1
+@reboot sleep 19; sudo dicestake-qt -daemon -txindex
+@reboot sleep 55; cd dicestake-qt && npm start
+*/2 * * * * cd dicestake_explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+*/5 * * * * cd dicestake_explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+*/10 * * * * cd dicestake_explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+*/30 * * * * cd dicestake_explorer && /usr/bin/nodejs scripts/mapgetdata.js > /dev/null 2>&1
+@reboot sleep 21; sudo goldcoin-qt -daemon -txindex
+@reboot sleep 58; cd goldcoin-qt && npm start
+*/2 * * * * cd goldcoin_explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+*/5 * * * * cd goldcoin_explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+*/10 * * * * cd goldcoin_explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+*/30 * * * * cd goldcoin_explorer && /usr/bin/nodejs scripts/mapgetdata.js > /dev/null 2>&1
+
+#################################################################################
