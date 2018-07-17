@@ -1,3 +1,5 @@
+sudo su
+
 echo 20 > /proc/sys/vm/nr_hugepages
 
-/proc/sys/vm/nr_hugepages */set=2048,4096,8192.. depending on system\*
+##/proc/sys/vm/nr_hugepages */set=2048,4096,8192.. depending on system\*
