@@ -1,0 +1,83 @@
+Linux "Terminal" Command Line Install gThumb
+
+(just copy && right click paste, enter #<this text>#)
+##############################################################################
+sudo apt-get update
+##############################################################################
+
+
+user@user-desktop ~ $ sudo apt-get update
+[sudo] password for pcie:
+
+
+##############################################################################
+enter your password
+##############################################################################
+
+
+Ign:1 http://packages.linuxmint.com sylvia InRelease
+Hit:2 http://packages.linuxmint.com sylvia Release                             
+Hit:3 http://linux.teamviewer.com/deb stable InRelease                         
+Hit:4 http://linux.teamviewer.com/deb preview InRelease                        
+Hit:5 http://archive.canonical.com/ubuntu xenial InRelease                     
+Hit:6 http://repo.steampowered.com/steam precise InRelease                     
+Hit:8 http://mirror.math.princeton.edu/pub/ubuntu xenial InRelease             
+Get:9 http://mirror.math.princeton.edu/pub/ubuntu xenial-updates InRelease [109 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]    
+Get:11 http://mirror.math.princeton.edu/pub/ubuntu xenial-backports InRelease [107 kB]
+Get:12 http://mirror.math.princeton.edu/pub/ubuntu xenial-updates/universe amd64 Packages [642 kB]
+Get:13 http://mirror.math.princeton.edu/pub/ubuntu xenial-updates/universe i386 Packages [584 kB]
+Get:14 http://mirror.math.princeton.edu/pub/ubuntu xenial-updates/universe Translation-en [259 kB]
+Fetched 1,807 kB in 1s (1,752 kB/s)                                            
+Reading package lists... Done
+
+
+(just copy && right click paste, enter #<this text>#)
+##############################################################################
+sudo apt-get install gthumb
+##############################################################################
+
+
+pcie@pcie-desktop ~ $ sudo apt-get install gthumb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  gthumb-data
+The following NEW packages will be installed:
+  gthumb gthumb-data
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,508 kB of archives.
+After this operation, 11.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+
+
+##############################################################################
+type "y" then press enter
+##############################################################################
+
+
+Get:1 http://mirror.math.princeton.edu/pub/ubuntu xenial/universe amd64 gthumb-data all 3:3.4.3-1 [1,675 kB]
+Get:2 http://mirror.math.princeton.edu/pub/ubuntu xenial/universe amd64 gthumb amd64 3:3.4.3-1 [833 kB]
+Fetched 2,508 kB in 0s (3,358 kB/s)
+Selecting previously unselected package gthumb-data.
+(Reading database ... 307188 files and directories currently installed.)
+Preparing to unpack .../gthumb-data_3%3a3.4.3-1_all.deb ...
+Unpacking gthumb-data (3:3.4.3-1) ...
+Selecting previously unselected package gthumb.
+Preparing to unpack .../gthumb_3%3a3.4.3-1_amd64.deb ...
+Unpacking gthumb (3:3.4.3-1) ...
+Processing triggers for gconf2 (3.2.6-3ubuntu6) ...
+Processing triggers for hicolor-icon-theme (0.15-0ubuntu1) ...
+Processing triggers for libglib2.0-0:amd64 (2.48.2-0ubuntu1) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Processing triggers for gnome-menus (3.13.3-6ubuntu3.1) ...
+Processing triggers for desktop-file-utils (0.22+linuxmint1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up gthumb-data (3:3.4.3-1) ...
+Setting up gthumb (3:3.4.3-1) ...
+pcie@pcie-desktop ~ $ 
+
+
+
+@@@@@ gThumb should now be installed, click Menu, Graphics > gThumb
