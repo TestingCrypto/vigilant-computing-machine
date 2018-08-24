@@ -1,0 +1,5 @@
+sudo apt-get install gsmartcontrol
+or
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/alex_sh/Ubuntu_18.04/ /' > /etc/apt/sources.list.d/home:alex_sh.list"
+sudo apt-get update
+sudo apt-get install gsmartcontrol
