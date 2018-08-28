@@ -1,0 +1,4 @@
+sudo add-apt-repository ppa:mikhailnov/pulseeffects -y
+sudo apt install pulseeffects pulseaudio
+
+// didn't seem to work right from the code pull (4 diff test routes so far), had to open Software Sources && Open PPA to install packages
