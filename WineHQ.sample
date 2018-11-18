@@ -1,0 +1,31 @@
+If your system is 64 bit, enable 32 bit architecture (if you haven't already):
+//////////////////////////////////////
+sudo dpkg --add-architecture i386
+//////////////////////////////////////
+wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard/Release.key
+//////////////////////////////////////
+sudo apt-key add Release.key
+//////////////////////////////////////
+sudo apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard ./'
+//////////////////////////////////////
+
+Installing without Internet
+To install Wine on an Ubuntu machine without internet access, you must have access to a second Ubuntu machine (or VM) with an internet connection to download the Wine .deb package and its dependencies.
+
+The procedure goes like this: On the machine with internet, add the WineHQ PPA, then cache just the necessary packages without actually extracting them:
+
+sudo add-apt-repository ppa:wine/wine-builds
+sudo apt-get update
+Then cache just the packages necessary for installing wine, without extracting them:
+
+sudo apt-get clean
+sudo apt-get --download-only install winehq-devel
+sudo apt-get --download-only dist-upgrade
+Copy all of the .deb files in /var/cache/apt/archives to a USB stick:
+
+cp -R /var/cache/apt/archives/ /media/usb-drive/deb-pkgs/
+Finally, on the machine without internet, install all of the packages from the flash drive:
+
+cd /media/usb-drive/deb-pkgs
+sudo dpkg -i *.deb
+The same instructions can also be used for an offline installation of the `winehq-staging` packages.
