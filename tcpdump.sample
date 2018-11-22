@@ -1,0 +1,59 @@
+{if} not installed with the Distro (command-line network watchING)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo apt-get install tcpdump
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo ifconfig
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo tcpdump -i enp0s3
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+2-Find Traffic Using Ports and Port Ranges
+
+in this way you can capture traffic on specific ports or from ports ranges. lets give  een example to find traffic on port 80
+	
+root@osradar-mint:~# tcpdump port 80
+root@osradar-mint:~# tcpdump portrange 80-444
+3-Find Traffic Based on Packet Size
+
+Are you looking for packets of a particular size themn use these options. You can use options like less, greater,
+	
+# tcpdump less 16
+# tcpdump greater 128
+# tcpdump <= 8
+
+4-Find Traffic by IP
+
+One of the most common queries, this will show you traffic from 8.8.8.8 whether it’s the source or the destination.
+
+4-1-Filtering by Source and Destination
+	
+# tcpdump host 8.8.8.8
+
+isolate traffic based on either source or destination using src and dst options.
+	
+# tcpdump src 10.0.0.1
+# tcpdump dst 10.0.0.254
+
+4-2-Finding Packets by Network
+
+To find packets going to or from a particular network,
+	
+# tcpdump net 192.168.2.0/24
+5-Capture and Save Packets in a File and read from file 
+
+5-1-capture and save packets into a file
+
+user (Control+c) to  interrupt  saving
+	
+# tcpdump -w file1.pcap -i enp0s3
+
+sudo tcpdump port 80
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+tcpdump -r file1.pcap
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+tcpdump -c 9 -i enp0s3
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+tcpdump -XX -i enp0s3
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+tcpdump  'tcp[(tcp[12]>>2):4] = 0x5353482D'
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+tcpdump -s 0 -A -n -l | egrep -i "POST /|pwd=|passwd=|password=|Host:"
