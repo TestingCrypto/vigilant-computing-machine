@@ -1,0 +1,3 @@
+sudo apt-get install vnstat && vnstati
+
+//network monitor {command-line + png = desktop app}
